@@ -18,3 +18,5 @@ class ModifiedDistanceStrategy(ABC):
     # We give the whole projectile to the strategy. The strategy will call properties of the projectile (ie: the initial_velocity and the angle) to determine the distance.
     def get_distance(self, projectile: ModifiedProjectile) -> float:
         raise NotImplementedError()
+
+    # Note that here we could add other getters for various resources. For instance, let's imagine that we would include the wind speed in our calculation. We could provide a method to ge the wind speed and direction here. The method would fetch from an external API the current wind speed and direction, and return it. The specific strategy's code would then call the method (like it does for `get_configuration()`) to get the wind speed and direction.
