@@ -6,6 +6,7 @@ class StandardProjectileConfiguration(Configuration):
     def __init__(self, gravitational_acceleration: float) -> None:
         self.gravitational_acceleration = gravitational_acceleration
 
+# This is a Marshmallow schema. You need to put the name of the variables and their type as seen in the matching object (ie: `StandardProjectileConfiguration` only has property `gravitational_acceleration`), and Marshmallow works its magic!
 class StandardProjectileConfigurationSchema(Schema):
     gravitational_acceleration = fields.Float()
 

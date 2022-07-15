@@ -42,7 +42,7 @@ def load_object_from_file(schema: Schema, file_name: str) -> Configuration:
 
 configuration_folder: str = "modified_pattern/db/"
 
-# The only difference with this projectile is that the projectile does not have a `get_distance` method because of the reversal as seen in point 1. described above.
+# The only difference with this projectile is that the projectile does not have a `get_distance` method because of the reversal as seen in point 1 described above.
 # Besides that, again it's the same projectile given to all the strategies.
 p: ModifiedProjectile = ModifiedProjectile(100, 45)
 
