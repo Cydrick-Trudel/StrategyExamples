@@ -32,7 +32,11 @@ In the `base_pattern` variant, the algorithms to calculate the for earth, the mo
 
 With the `modified_pattern` variant, configuration objects are introduced. Properties that varies can be put into these configuration object, and the strategy's algorithm can refer to the values saved in these configuration objects. This leads to having a single strategy implementation that's acceptable to every planet, and just takes the gravitational acceleration.
 
+### Configurable by a third party
 
+As mentioned in the section `Removing similar strategies`, there are now configuration objects. These configuration objects are saved from objects into JSON files by the `modified_pattern_create_fake_db.py`, and are then loaded from file into object by `modified_pattern_main.py`.
+
+Consider the fact that these configuration objects may be saved in a database. This can be powerful because an administrator may be able to update the gravitational constant for a new planet. By only updating the database,the configuration object changes, and therefore the behavior of the strategy.
 
 ## How to run
 
