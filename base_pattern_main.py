@@ -5,7 +5,14 @@ from base_pattern.strategies.implementations.distance_calculation_in_space impor
 from base_pattern.strategies.implementations.distance_calculation_on_mars import DistanceCalculationOnMars
 from base_pattern.strategies.implementations.distance_calculation_on_moon import DistanceCalculationOnMoon
 
-# This is the first main we'll start with. This is the 'pure' form of the Strategy pattern as seen in https://en.wikipedia.org/wiki/Strategy_pattern and the easiest to understand.
+# This is the first main we'll start with. This is the 'pure' form of the Strategy pattern as seen in https://en.wikipedia.org/wiki/Strategy_pattern and the easiest to understand. If you look at this image: https://upload.wikimedia.org/wikipedia/commons/4/45/W3sDesign_Strategy_Design_Pattern_UML.jpg here's the association between the classes:
+ 
+# |    Wikipedia image    |       This code example       |
+# ---------------------------------------------------------
+# | Context               | BaseProjectile                |
+# | Strategy              | BaseDistanceStrategy          |
+# | Strategy1             | BasicDistanceCalculation      |
+# | Strategy2             | DistanceCalculationOnMoon     |
 
 # We start with the same projectile. Regardless of if we're on earth, the moon, mars or space, we have a projectile that travels with an initial velocity of 100 m/s at a 45° angle.
 p: BaseProjectile = BaseProjectile(100, 45)
