@@ -9,7 +9,7 @@ from modified_pattern.strategies.implementations.modified_distance_calculation i
 from modified_pattern.strategies.implementations.modified_distance_calculation_hitting_object import ModifiedDistanceCalculationHittingObject
 from modified_pattern.strategies.implementations.modified_distance_calculation_in_space import ModifiedDistanceCalculationInSpace
 
-# This is the modified pattern. There's a couple of key differences:
+# This is the modified pattern. There's a couple of key differences compared to `base_pattern_main.py`:
 # 
 # 1- There's a bit of reversal between the projectile and its strategies. In the base pattern, we give the strategy to the projectile, and it returns a different distance. In this modified pattern, we give the projectile to the strategy, and it returns a distance. It's a small difference, but it will be easier to implement it this way for the future.
 # 
